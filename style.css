@@ -131,17 +131,31 @@
 
 /* All similar Styling */
 
-
 section{
     padding: 100px o;
 }
+
+.about, .service, .skills{
+    font-family: 'poppins',sans-serif;
+}
+
+.about .about-content,
+.service .serve-content,
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
 section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
     font-weight: 600;
     margin-top: 50px;
-    padding-top: 20px;
+    padding-top: 25px;
     margin-bottom:55px ;
     padding-bottom: 20px;
     font-family: 'ubuntu', sans-serif;
@@ -171,20 +185,10 @@ section .title::after{
 /* about section styling */
 
 
-.about, .service{
-    font-family: 'poppins',sans-serif;
-}
-
 .about .title::after{
     content: "Who I Am";
 }
-.about .about-content,
-.service .serve-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items:center;
-    justify-content: space-between;
-}
+
 .about .about-content .left{
     width: 45%;
 }
@@ -193,6 +197,8 @@ section .title::after{
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
+    border-color: blue;
+    border-width: 10px;
 }
 .about .about-content .right{
     width: 55%;
@@ -270,6 +276,81 @@ section .title::after{
     font-weight: 600;
     margin:10px 0 7px 0;
 }
+
+/* Skills Styling */
+
+.skills .title::after{
+    content: "What I know";
+}
+.skills .skills-content .column{
+    text-align: justify;
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: #4848a0;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 8px 20px;
+    margin-top: 18px;
+    border-radius: 30px;
+    border: 4px solid black;
+    transition: all 0.3s ease-in-out;
+}
+.skills .skills-content .left a:hover{
+    color: #4848a0;
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display:flex ;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 16px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightblue;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 88%;
+    left: 0;
+    top: 0;
+    background: #4848a0;
+}
+.skills .skills-content .right .html::before{
+    width: 90%;
+}
+.skills .skills-content .right .css::before{
+    width: 60%;
+}
+.skills .skills-content .right .js::before{
+    width: 10%;
+}
+.skills .skills-content .right .php::before{
+    width: 30%;
+}
+.skills .skills-content .right .mysql::before{
+    width: 25%;
+}
+
 
 /* responsive media query starting */
 
@@ -352,6 +433,14 @@ section .title::after{
         justify-content: center;
         margin:0 auto 60px ;
     }
+    .service .serve-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px ;
+    }
+    .skills .skills-content .column{
+        width: 100%;
+        margin-bottom: 35px ;
+    }
     
 }
 @media (max-width: 690px){
@@ -368,6 +457,10 @@ section .title::after{
         font-size:20px;
         padding: 9px 25px;
     }
+    .service .serve-content .card{
+        width: 100%;
+    }
+    
 }
 /* 500px */
 @media (max-width: 500px){
