@@ -10,7 +10,55 @@ $(document).ready(function(){
     // to toggle menu/navigation bar script
 
     $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active")
-        $('.menu-btn i').toggleClass("active")
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+    
+    // typing animation
+    var typed = new Typed(".typing",{
+        strings: ["UI-Designer","UX-Designer","Front-End Developer","Freelancer"],
+        typeSpeed:100,
+        backspeed:60,
+        loop:true
+    });
+
+    var typed = new Typed(".typing-2",{
+        strings: ["UI-Designer","UX-Designer","Front-End Developer","Freelancer"],
+        typeSpeed:100,
+        backspeed:60,
+        loop:true
+    });
+
+    // owl carasoul script
+    $('.carousel').owlCarousel({
+        margin:20,
+        loop:true,
+        autoplayTimeOut:2000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:false
+            },
+            600:{
+                items:2,
+                nav:false
+            },
+            1000:{
+                items:3,
+                nav:false
+            }
+        }
     });
 });
+
+    // slide up script
+const toTop = document.querySelector(".scroll-up-btn");
+
+window.addEventListener("scroll",()=>{
+    if (window.pageYOffset > 300){
+        toTop.classList.add("active");
+    } else {
+        toTop.classList.remove("active");
+    }
+})
