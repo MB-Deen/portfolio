@@ -210,6 +210,7 @@ section .title::after{
 /* about section styling */
 
 
+
 .about .title::after{
     content: "Who I Am";
 }
